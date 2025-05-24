@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,600;1,600&family=National+Park:wght@200..800&display=swap');
+* {
+    font-family: "National Park", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 50%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.meses {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.meses h1,
+#mesAtual {
+    font-size: 1.5rem;
+}
+
+.meses button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.meses button:hover {
+    background-color: #0056b3;
+}
+
+.diasSemana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0.5rem;
+}
+
+#dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.4rem;
+}
+
+#dias div {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e9ecef;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+}
+
+#dias div:hover {
+    background-color: #d0d7df;
+}
+
+/* Dia com tarefa (caso for usar isso depois) */
+.tem-task {
+    background-color: #c6f6d5;
+    font-weight: bold;
+    border: 2px solid #38a169;
+}
+
+/* Modal opcional se quiser usar */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-conteudo {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-conteudo h2 {
+    margin-bottom: 1rem;
+}
+
+.modal-conteudo input {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.modal-conteudo button {
+    background-color: #28a745;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.modal-conteudo button:hover {
+    background-color: #218838;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.fechar:hover {
+    color: #000;
+}

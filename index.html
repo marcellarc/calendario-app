@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calendário</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="meses">
+            <button id="mesAnterior">◀</button>
+            <h1 id="mesAtual">Maio 2025</h1>
+            <button id="mesSeguinte">▶</button>
+        </header>
+
+        <div class="diasSemana">
+            <div>Dom</div>
+            <div>Seg</div>
+            <div>Ter</div>
+            <div>Qua</div>
+            <div>Qui</div>
+            <div>Sex</div>
+            <div>Sáb</div>
+        </div>
+
+        <div id="dias" class="dias-grid">
+            <!-- Dias serão inseridos aqui via JavaScript -->
+        </div>
+    </div>
+
+    <div id="taskModal" class="modal hidden">
+        <div class="modal-conteudo">
+            <span id="fecharModal" class="fechar">&times;</span>
+            <h2 id="dataSelecionada">Adicionar Tarefa</h2>
+            <input type="text" id="taskInput" placeholder="Digite sua tarefa" />
+            <button id="salvarTask">Salvar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
